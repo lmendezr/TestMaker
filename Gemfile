@@ -9,10 +9,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'mysql2'
 gem 'sendgrid'
+gem 'twitter-bootswatch-rails'
+gem 'therubyracer'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
