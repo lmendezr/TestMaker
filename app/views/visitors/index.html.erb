@@ -1,1 +1,65 @@
 <h3>Welcome</h3>
+
+<h2>Courses</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Course.all.each do |course| %>
+    <tr>
+      <td><%= link_to course.id, course_path(course) %></td>
+      <td><%= course.name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Topics</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Course</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Topic.all.each do |topic| %>
+      <tr>
+        <td><%= link_to topic.id, topic_path(topic) %></td>
+        <td><%= topic.name %></td>
+        <td><%= topic.course.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Problem</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Description</th>
+      <th>Difficulty</th>
+      <th>Solution</th>
+      <th>Process</th>
+      <th>Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Problem.all.each do |problem| %>
+      <tr>
+        <td><%= link_to problem.id, problem_path(problem) %></td>
+        <td><%= problem.description %></td>
+        <td><%= problem.difficulty %></td>
+        <td><%= problem.solution %></td>
+        <td><%= problem.process %></td>
+        <td><%= problem.topic.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

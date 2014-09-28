@@ -6,6 +6,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'cf-autoconfig', '~> 0.2.1'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
@@ -14,6 +15,8 @@ gem 'mysql2'
 gem 'sendgrid'
 gem 'twitter-bootswatch-rails'
 gem 'therubyracer'
+gem 'bootstrap-sass'
+gem 'rails_12factor', group: :production
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
